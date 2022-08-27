@@ -52,7 +52,7 @@ app.use("/category",require("./routers/CategoryRouter"));
 app.use("/blog",require("./routers/BlogRouter"));
 app.use("/upload",require("./routers/UploadRouter"));
 app.get("/",function(req,res){
-res.send("hhh")
+res.sendFile("./public/html")
 })
 app.listen(port,function(){
     console.log("server started on port 3000");
