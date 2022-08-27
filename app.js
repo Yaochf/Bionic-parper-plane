@@ -54,6 +54,6 @@ app.use("/upload",require("./routers/UploadRouter"));
 app.get("/",function(req,res){
 res.send("hhh")
 })
-app.listen(process.env.PORT,function(){
+app.listen(port,function(){
     console.log("server started on port 3000");
 })
