@@ -5,7 +5,7 @@ const multer = require("multer");//node.js 处理的中间件，主要用于上�
 const path = require("path")
 const {db,genid} = require("./db/DbUtils"); 
 const {query} = require("./db/blogMysql");
-const port = 3000;
+const port = process.env.PORT || 3000;
 //跨域请求开放
 app.use(function(req,res,next){
     //设置允许跨域的域名，*代表任意域名
@@ -54,6 +54,6 @@ app.use("/upload",require("./routers/UploadRouter"));
 app.get("/",function(req,res){
 res.send("hhh")
 })
-app.listen(port,function(){
+app.listen(process.env.PORT,function(){
     console.log("server started on port 3000");
 })
