@@ -36,8 +36,6 @@ router.post("/login",async (req,res)=>{
         let login_token = uuidv4();
         let update_token_sql = "UPDATE `admin` SET `token` = ? where `id` = ?"
         await query(update_token_sql,[login_token,rows[0].id]);
-        let {err,rows1} = await query("select * from `admin` where `id` = ?",[rows[0].id]);
-        console.log(rows1)
         let admin_info = rows[0]
         admin_info.token = login_token;
         admin_info.password = "";
