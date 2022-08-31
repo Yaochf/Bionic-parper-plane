@@ -1,0 +1,3 @@
+[submodule "parperplane-blog"]
+	path = parperplane-blog
+	url = https://git.heroku.com/parperplane-blog.git
